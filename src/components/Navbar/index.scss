@@ -1,0 +1,172 @@
+@import '#scss/colors';
+
+.container {
+  align-items: center;
+  background: $primary;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  margin: auto;
+  position: relative;
+  top: 0;
+  transition: 0.2s;
+  z-index: 101;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  &-open {
+    background: $primary;
+  }
+}
+
+.nav {
+  ul {
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 101;
+
+    li {
+      color: $secondary;
+      float: left;
+      font-size: 20px;
+      margin-right: 2rem;
+      margin-top: 1rem;
+      transition: 0.2s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      div {
+        background-color: $secondary;
+        border-radius: 5rem;
+        height: 3px;
+        margin: 4px 0;
+        transition: 0.2s;
+        width: 24px;
+      }
+    }
+  }
+
+  &-open {
+    ul {
+      li {
+        color: $secondary;
+
+        div {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.image {
+  position: relative;
+  transition: 0.3s;
+  z-index: 101;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #fff;
+  border: unset;
+  border-radius: 5rem;
+  color: $secondary;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: -1rem;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background-color: darken(#fff, 3);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &-open {
+    background-color: $secondary;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($secondary, 2);
+      box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.one {
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.two {
+  opacity: 0;
+}
+
+.three {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.overlay {
+  background-color: $primary;
+  height: 0;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  transition: 0.2s;
+  width: 100%;
+  z-index: 100;
+
+  &-open {
+    height: 100%;
+    max-height: 100vh;
+  }
+}
+
+.overlay-content {
+  border-bottom: 1px solid $secondary;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 3rem;
+  position: relative;
+  text-align: center;
+  top: 25%;
+  width: 100%;
+  width: 15rem;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.overlay a {
+  color: $secondary;
+  display: inline-block;
+  font-size: 36px;
+  padding: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: $secondary;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  &:hover:after {
+    width: 11rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

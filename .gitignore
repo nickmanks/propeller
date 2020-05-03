@@ -1,0 +1,7 @@
+.vscode
+.DS_Store
+.cov
+
+node_modules
+
+build

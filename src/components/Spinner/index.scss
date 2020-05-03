@@ -1,0 +1,27 @@
+@import '#scss/colors';
+
+.spinner {
+  animation: spin 2s linear infinite;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid $primary;
+  height: 150px;
+  height: 120px;
+  left: 50%;
+  margin: -75px 0 0 -75px;
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  width: 120px;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

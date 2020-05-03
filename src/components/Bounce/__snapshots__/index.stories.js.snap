@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`standard 1`] = `
+<div
+  className="mock-bounce"
+>
+  <div
+    className="mock-one"
+  />
+  <div
+    className="mock-two"
+  />
+  <div
+    className="mock-three"
+  />
+</div>
+`;

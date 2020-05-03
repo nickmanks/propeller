@@ -1,0 +1,36 @@
+@import '#scss/colors';
+
+.bounce {
+  margin: 100px auto 0;
+  text-align: center;
+  width: 70px;
+
+  > div {
+    animation: bouncedelay 1.4s infinite ease-in-out both;
+    background-color: $primary;
+    border-radius: 100%;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.one {
+  animation-delay: -0.32s !important;
+}
+
+.two {
+  animation-delay: -0.16s !important;
+}
+
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}

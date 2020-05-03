@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`standard 1`] = `
+Array [
+  <div
+    className="mock-overlay"
+  >
+    <div
+      className="mock-overlayContent"
+    >
+      <a>
+        About
+      </a>
+      <a>
+        Services
+      </a>
+      <a>
+        Get Quote
+      </a>
+      <a>
+        Contact
+      </a>
+    </div>
+  </div>,
+  <div
+    className="mock-container"
+  >
+    <div
+      className="mock-logo"
+    >
+      <img
+        src="logo.png"
+        width="130"
+      />
+    </div>
+    <nav
+      className="mock-nav"
+    >
+      <ul>
+        <li>
+          Login
+        </li>
+        <li>
+          <button
+            className="mock-button"
+          >
+            Sign Up
+          </button>
+        </li>
+        <li
+          onClick={[Function]}
+        >
+          <div />
+          <div />
+          <div />
+        </li>
+      </ul>
+    </nav>
+  </div>,
+]
+`;
