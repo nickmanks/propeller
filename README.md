@@ -25,8 +25,8 @@
 ## Install
 
 ```bash
-git clone https://github.com/nickmanks/ofx.git
-cd ofx
+git clone https://github.com/nickmanks/propeller.git
+cd propeller
 npm ci
 ```
 

@@ -5,7 +5,6 @@ import App from '#src/app';
 import {store} from '#src/store';
 import {document} from '#src/globals';
 import '#scss/fonts.scss';
-import 'cesium/Widgets/widgets.css';
 
 ReactDOM.render(
   <Provider store={store}>
