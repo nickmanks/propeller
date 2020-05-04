@@ -10,11 +10,7 @@ import Bounce from '#src/components/Spinner';
 const App = ()=> (
   <Suspense fallback={<Bounce />}>
     <Page>
-      <Map
-        defaultZoom={0}
-        minZoom={-1}
-        maxZoom={3}
-      >
+      <Map defaultZoom={0} minZoom={-1} maxZoom={3}>
         <Zoom />
         <Pan />
         <Keyboard />

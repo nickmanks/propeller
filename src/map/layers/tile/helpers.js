@@ -1,4 +1,3 @@
-
 export const TILE_SIZE = 256;
 
 export default {
@@ -19,19 +18,17 @@ export default {
   getTileCount: (zoom)=> Math.pow(2, zoom) * Math.pow(2, zoom),
 
   // Get the width and height dimension of the map in pixels
-  getMapDimension: (zoom, tileSize = TILE_SIZE)=> Math.ceil(
-    tileSize * Math.pow(2, zoom)
-  ),
+  getMapDimension: (zoom, tileSize = TILE_SIZE)=>
+    Math.ceil(tileSize * Math.pow(2, zoom)),
 
   // Array of tile (top, left) coordinates for each tile
   // [[0, 0], [256, 0], [512, 0] ...]
   getTileArray: (zoom, tileSize = TILE_SIZE)=> {
     const tiles = [];
 
-
     for (let y = 0; y < zoom + 1; y += 1) {
       for (let x = 0; x < zoom + 1; x += 1) {
-        tiles[y*(zoom + 1) + x] = [x * tileSize, y * tileSize];
+        tiles[y * (zoom + 1) + x] = [x * tileSize, y * tileSize];
       }
     }
 

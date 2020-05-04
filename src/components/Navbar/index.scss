@@ -7,12 +7,12 @@
   height: 10vh;
   justify-content: space-between;
   margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
   position: relative;
   top: 0;
   transition: 0.2s;
   z-index: 101;
-  padding-left: 5%;
-  padding-right: 5%;
 
   &-open {
     background: $primary;
@@ -66,10 +66,10 @@
 }
 
 .image {
+  cursor: pointer;
   position: relative;
   transition: 0.3s;
   z-index: 101;
-  cursor: pointer;
 }
 
 .button {
@@ -151,22 +151,22 @@
   text-decoration: none;
   transition: 0.2s;
 
-  &:after {
+  &::after {
     background: none repeat scroll 0 0 transparent;
-    content: "";
+    background: $secondary;
+    content: '';
     display: block;
     height: 2px;
     left: 50%;
     position: absolute;
-    background: $secondary;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
 
-  &:hover:after {
-    width: 11rem;
+  &:hover::after {
     left: 0;
-    right: 0;
     margin: auto;
+    right: 0;
+    width: 11rem;
   }
 }

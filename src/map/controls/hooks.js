@@ -74,7 +74,7 @@ export const useKeyboard = (ref, dispatch)=> {
         evt.preventDefault();
         evt.stopPropagation();
 
-        const key = (evt.which) ? evt.which : event.keyCode;
+        const key = evt.which ? evt.which : event.keyCode;
 
         if (ZOOM_IN_KEYS.has(key)) {
           dispatch({
@@ -92,7 +92,7 @@ export const useKeyboard = (ref, dispatch)=> {
       });
 
       document.addEventListener('keydown', (evt)=> {
-        const key = (evt.which) ? evt.which : event.keyCode;
+        const key = evt.which ? evt.which : event.keyCode;
 
         if (key === LEFT_KEY) {
           dispatch({

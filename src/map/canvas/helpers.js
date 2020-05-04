@@ -1,4 +1,3 @@
-
 export default {
   setup: (ref, container)=> {
     const ctx = ref.current.getContext('2d');
@@ -35,6 +34,7 @@ export default {
     ctx.transform(...matrix);
   },
 
+  // eslint-disable-next-line max-params
   image: (ref, image, x, y, width, height)=> {
     const ctx = ref.current.getContext('2d');
     ctx.drawImage(image, x, y, width, height);

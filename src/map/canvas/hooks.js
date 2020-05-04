@@ -6,15 +6,10 @@ import {minMax} from '../utils';
 
 const canvasReducer = ({minZoom, maxZoom})=> (state, action)=> {
   switch (action.type) {
-
     case 'set-zoom':
       return {
         ...state,
-        zoom: minMax(
-          state.zoom + action.delta,
-          minZoom,
-          maxZoom
-        ),
+        zoom: minMax(state.zoom + action.delta, minZoom, maxZoom),
         renderKey: Math.random()
       };
 
@@ -34,9 +29,7 @@ const canvasReducer = ({minZoom, maxZoom})=> (state, action)=> {
 };
 
 export const useCanvas = (defaultState, options)=> {
-  const [state, dispatch] = useReducer(
-    canvasReducer(options), defaultState
-  );
+  const [state, dispatch] = useReducer(canvasReducer(options), defaultState);
 
   return {state, dispatch};
 };

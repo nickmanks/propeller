@@ -81,10 +81,7 @@ export default class {
 
     for (let y = 0; y < dim; y += 1) {
       for (let x = 0; x < dim; x += 1) {
-        if (
-          !this.hasTile(level, x, y)
-          && !this.fetchingTile(level, x, y)
-        ) {
+        if (!this.hasTile(level, x, y) && !this.fetchingTile(level, x, y)) {
           await this.fetchTile(level, x, y);
         }
       }
@@ -111,13 +108,13 @@ export default class {
 
   draw(canvas, [xOffset, yOffset], zoom) {
     const level = Tile.getLevel(zoom);
-    const tilePixels = this.size * (2 ** (zoom - level));
+    const tilePixels = this.size * 2 ** (zoom - level);
     const dim = Tile.getTileDimension(level);
 
     for (let y = 0; y < dim; y += 1) {
       for (let x = 0; x < dim; x += 1) {
-        const xPos = (xOffset) + (x * tilePixels);
-        const yPos = (yOffset) + (y * tilePixels);
+        const xPos = xOffset + x * tilePixels;
+        const yPos = yOffset + y * tilePixels;
 
         if (!this.fetchingTile(level, x, y)) {
           Canvas.image(

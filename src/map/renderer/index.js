@@ -14,12 +14,7 @@ const Renderer = ()=> {
     Canvas.clear(canvas);
 
     for (const layer of collection) {
-      layer.drawTiles(
-        canvas,
-        state.center,
-        state.zoom,
-        state.renderKey
-      );
+      layer.drawTiles(canvas, state.center, state.zoom, state.renderKey);
     }
   }
 

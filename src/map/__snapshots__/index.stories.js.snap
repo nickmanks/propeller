@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`standard 1`] = `
+<div
+  className="mock-map"
+  id="map-container"
+>
+  <canvas
+    className="mock-canvas"
+  />
+</div>
+`;

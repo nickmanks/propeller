@@ -6,9 +6,7 @@ import styles from './index.scss';
 
 export const CanvasContext = createContext();
 
-const Canvas = ({
-  container, defaultZoom, minZoom, maxZoom, children
-})=> {
+const Canvas = ({container, defaultZoom, minZoom, maxZoom, children})=> {
   const canvas = useRef();
   const {state, dispatch} = useCanvas(
     {
@@ -22,10 +20,7 @@ const Canvas = ({
 
   return (
     <>
-      <canvas
-        className={styles.canvas}
-        ref={canvas}
-      />
+      <canvas className={styles.canvas} ref={canvas} />
       <CanvasContext.Provider value={{canvas, state, dispatch}}>
         {children}
         <Renderer />

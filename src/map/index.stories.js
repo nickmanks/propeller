@@ -8,11 +8,7 @@ import {component} from '#src/testing/snapshots';
 
 component('Map')
   .when('standard', ()=> (
-    <Map
-      defaultZoom={0}
-      minZoom={-1}
-      maxZoom={3}
-    >
+    <Map defaultZoom={0} minZoom={-1} maxZoom={3}>
       <Zoom />
       <Pan />
       <Keyboard />
@@ -20,31 +16,19 @@ component('Map')
     </Map>
   ))
   .when('with zoom', ()=> (
-    <Map
-      defaultZoom={0}
-      minZoom={-1}
-      maxZoom={3}
-    >
+    <Map defaultZoom={0} minZoom={-1} maxZoom={3}>
       <Zoom />
       <TileLayer url={'http://localhost:9000/tiles'} />
     </Map>
   ))
   .when('with pan', ()=> (
-    <Map
-      defaultZoom={0}
-      minZoom={-1}
-      maxZoom={3}
-    >
+    <Map defaultZoom={0} minZoom={-1} maxZoom={3}>
       <Pan />
       <TileLayer url={'http://localhost:9000/tiles'} />
     </Map>
   ))
   .when('with keyboard controls', ()=> (
-    <Map
-      defaultZoom={0}
-      minZoom={-1}
-      maxZoom={3}
-    >
+    <Map defaultZoom={0} minZoom={-1} maxZoom={3}>
       <Keyboard />
       <TileLayer url={'http://localhost:9000/tiles'} />
     </Map>

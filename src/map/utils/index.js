@@ -1,5 +1,3 @@
-
-
 export const minMax = (value, min, max)=> {
   if (value < min) {
     return min;
